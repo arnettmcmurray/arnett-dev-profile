@@ -3,39 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arnett McMurray - Portfolio</title>
-    <link rel="stylesheet" href="normalize.css" />
+    <title>Arnett McMurray | Developer Profile</title>
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <h1>Arnett McMurray</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+    <main class="container text-center mt-5">
+      <header>
+        <h1>Arnett “VYLNT:AMMO” McMurray</h1>
+        <p>Learning. Breaking. Rebuilding. One line at a time.</p>
+      </header>
 
-    <main>
-      <section class="hero">
-        <h2>Welcome to My Portfolio</h2>
+      <section class="mt-5">
+        <h2>Who Am I?</h2>
         <p>
-          Just a developer on the rise, armed with coffee and CSS grid layouts.
+          Ex-chef turned digital renegade. Coding like it’s a street fight. I
+          test, I learn, I make the computer tap out.
         </p>
       </section>
 
-      <section class="highlights">
-        <h3>Featured Projects</h3>
-        <div class="card">Project A</div>
-        <div class="card">Project B</div>
-        <div class="card">Project C</div>
+      <section class="row mt-5 text-start">
+        <div class="col-md-4">
+          <h3>🧠 Skills</h3>
+          <ul>
+            <li>HTML / CSS / Bootstrap</li>
+            <li>Python, SQL</li>
+            <li>R, Tableau</li>
+            <li>GitHub Dev Workflows</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3>🎓 Education</h3>
+          <ul>
+            <li>Coding Temple – Software Engineering Bootcamp</li>
+            <li>DePaul University – Business Science</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3>📍 Location</h3>
+          <ul>
+            <li>Chicago, IL – South Side native, North Side bred</li>
+            <li>Mac Mini rig w/ VYLNT:AMMO terminal skin</li>
+          </ul>
+        </div>
       </section>
-    </main>
 
-    <footer>
-      <p>&copy; 2025 Arnett McMurray. All rights reserved.</p>
-    </footer>
+      <section class="mt-5">
+        <h2>🐾 Partners in Crime</h2>
+        <p>Obi (dog) & Bubba (cat) — my furry chaos consultants.</p>
+        <div class="d-flex justify-content-center gap-4 mt-3">
+          <img
+            src="images/obi-placeholder.jpg"
+            alt="Obi"
+            class="pet-img glow"
+          />
+          <img
+            src="images/bubba-placeholder.jpg"
+            alt="Bubba"
+            class="pet-img glow"
+          />
+        </div>
+      </section>
+
+      <section class="mt-5 text-center">
+        <img
+          src="images/profile.jpg"
+          alt="Profile image of Arnett"
+          class="profile-img mb-2"
+        />
+        <h2>Arnett McMurray</h2>
+        <p>Student • Developer • Ex-Chef</p>
+      </section>
+
+      <footer class="mt-5 text-center">
+        <p>
+          © 2025 Arnett McMurray | Built with grit, coffee, and command-line
+          rage
+        </p>
+      </footer>
+    </main>
   </body>
 </html>
