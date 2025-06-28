@@ -11,80 +11,142 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <main class="container text-center mt-5">
-      <header>
-        <h1>Arnett “VYLNT:AMMO” McMurray</h1>
-        <p>Learning. Breaking. Rebuilding. One line at a time.</p>
-      </header>
-
-      <section class="mt-5">
-        <h2>Who Am I?</h2>
-        <p>
-          Ex-chef turned digital renegade. Coding like it’s a street fight. I
-          test, I learn, I make the computer tap out.
-        </p>
-      </section>
-
-      <section class="row mt-5 text-start">
-        <div class="col-md-4">
-          <h3>🧠 Skills</h3>
-          <ul>
-            <li>HTML / CSS / Bootstrap</li>
-            <li>Python, SQL</li>
-            <li>R, Tableau</li>
-            <li>GitHub Dev Workflows</li>
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Arnett "VYLNT:AMMO" McMurray</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#partners">Partners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
           </ul>
         </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5 bg-primary text-white text-center">
+      <div class="container">
+        <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=400&h=400&facepad=2" alt="Profile image of Arnett" class="profile-img mb-3 shadow-lg border border-3 border-white" style="width: 140px; height: 140px; object-fit: cover;" />
+        <h1 class="display-4 fw-bold">Arnett "VYLNT:AMMO" McMurray</h1>
+        <p class="lead">Learning. Breaking. Rebuilding. One line at a time.</p>
+        <a href="contact.html" class="btn btn-light btn-lg mt-3 shadow">Contact Me</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <h2 class="card-title h4 mb-3">Who Am I?</h2>
+              <p class="card-text mb-0">
+                Ex-chef turned digital renegade. Coding like it's a street fight. I test, I learn, I make the computer tap out.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills, Education, Location Section -->
+    <section id="skills" class="container py-5">
+      <div class="row g-4">
         <div class="col-md-4">
-          <h3>🎓 Education</h3>
-          <ul>
-            <li>Coding Temple – Software Engineering Bootcamp</li>
-            <li>DePaul University – Business Science</li>
-          </ul>
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h3 class="card-title">🧠 Skills</h3>
+              <ul class="list-unstyled mb-0">
+                <li>HTML / CSS / Bootstrap</li>
+                <li>Python, SQL</li>
+                <li>R, Tableau</li>
+                <li>GitHub Dev Workflows</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="col-md-4">
-          <h3>📍 Location</h3>
-          <ul>
-            <li>Chicago, IL – South Side native, North Side bred</li>
-            <li>Mac Mini rig w/ VYLNT:AMMO terminal skin</li>
-          </ul>
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h3 class="card-title">🎓 Education</h3>
+              <ul class="list-unstyled mb-0">
+                <li>Coding Temple – Software Engineering Bootcamp</li>
+                <li>DePaul University – Business Science</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </section>
-
-      <section class="mt-5">
-        <h2>🐾 Partners in Crime</h2>
-        <p>Obi (dog) & Bubba (cat) — my furry chaos consultants.</p>
-        <div class="d-flex justify-content-center gap-4 mt-3">
-          <img
-            src="images/obi-placeholder.jpg"
-            alt="Obi"
-            class="pet-img glow"
-          />
-          <img
-            src="images/bubba-placeholder.jpg"
-            alt="Bubba"
-            class="pet-img glow"
-          />
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h3 class="card-title">📍 Location</h3>
+              <ul class="list-unstyled mb-0">
+                <li>Chicago, IL – South Side native, North Side bred</li>
+                <li>Mac Mini rig w/ VYLNT:AMMO terminal skin</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="mt-5 text-center">
-        <img
-          src="images/profile.jpg"
-          alt="Profile image of Arnett"
-          class="profile-img mb-2"
-        />
-        <h2>Arnett McMurray</h2>
-        <p>Student • Developer • Ex-Chef</p>
-      </section>
+    <!-- Partners in Crime Section -->
+    <section id="partners" class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+              <h2 class="card-title h4 mb-3">🐾 Partners in Crime</h2>
+              <p>Obi (dog) & Bubba (cat) — my furry chaos consultants.</p>
+              <div class="d-flex justify-content-center gap-4 mt-3">
+                <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" alt="Obi" class="pet-img glow shadow" />
+                <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=400&q=80" alt="Bubba" class="pet-img glow shadow" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <footer class="mt-5 text-center">
-        <p>
-          © 2025 Arnett McMurray | Built with grit, coffee, and command-line
-          rage
-        </p>
-      </footer>
-    </main>
+    <!-- Profile Section (Summary) -->
+    <section class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="card shadow-sm border-0 text-center">
+            <div class="card-body">
+              <h2 class="card-title h4 mb-2">Arnett McMurray</h2>
+              <p class="mb-0">Student • Developer • Ex-Chef</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+      <div class="container text-center">
+        <small>
+          © 2025 Arnett McMurray | Built with grit, coffee, and command-line rage
+        </small>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS (for navbar toggling) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
