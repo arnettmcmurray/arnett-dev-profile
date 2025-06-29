@@ -121,3 +121,41 @@ form button {
   border-radius: 5px;
   cursor: pointer;
 }
+.cta-buttons a {
+  display: inline-block;
+  margin: 1rem 1rem 0 0;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #00f0ae;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #00c89c;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #00f0ae;
+  border: 2px solid #00f0ae;
+}
+
+.btn-secondary:hover {
+  background-color: #00f0ae;
+  color: #000;
+}
+
+section p {
+  text-indent: 2em;
+  color: #f5f5f5;
+}
+
+.no-indent p {
+  text-indent: 0;
+}
