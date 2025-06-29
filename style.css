@@ -1,161 +1,36 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #121212;
-  color: #f0f0f0; /* Brighter for visibility */
-  margin: 0;
+  color: #ffffff;
+  line-height: 1.6;
 }
 
-h1,
+.navbar {
+  margin-bottom: 0;
+}
+
 h2,
 h3 {
-  color: #ffffff;
+  color: #f8f9fa;
 }
 
-p,
-li {
-  color: #e0e0e0;
-}
-
-.profile-section h3 {
-  color: #ffdd57; /* Warm gold pop */
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
-}
-
-.profile-section ul li {
-  color: #e0e0e0; /* Soft white-gray for contrast */
-  padding-left: 1rem;
-  position: relative;
-}
-
-.profile-section ul li::before {
-  content: "•";
-  color: #ffdd57;
-  position: absolute;
-  left: 0;
-}
-
-section {
-  background-color: #1e1e1e; /* lighter than body for separation */
-  padding: 2rem;
-  border-radius: 10px;
-  margin: 1rem auto;
-}
-
-.main-header {
-  background-color: #222;
-  color: #00ffae;
-  border-bottom: 3px solid #00ffae;
-}
-
-.tagline {
-  font-style: italic;
-  color: #ccc;
-}
-
-.about-me,
-.experience,
-.pets {
-  background-color: #1f1f1f;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 10px;
-}
-
-.pet-img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border: 3px solid #00ffae;
-  border-radius: 50%;
-  box-shadow: 0 0 15px #00ffae88;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 footer {
-  background-color: #222;
-  color: #888;
-}
-.profile-section {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #111;
-  color: #f0f0f0;
+  border-color: #444;
 }
 
-.profile-img {
-  max-width: 160px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-section h2,
-section p,
-section li {
-  color: #f5f5f5;
-}
-form {
-  background-color: #111;
-  color: #f5f5f5;
-  padding: 1.5rem;
-  border-radius: 10px;
-  max-width: 500px;
-  margin: 0 auto;
+.nav-link {
+  color: #ccc !important;
 }
 
-form input,
-form textarea {
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: none;
+.nav-link:hover {
+  color: #fff !important;
 }
 
-form button {
-  background-color: #ffcc00;
-  color: #000;
-  padding: 0.5rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.cta-buttons a {
-  display: inline-block;
-  margin: 1rem 1rem 0 0;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.btn-primary {
-  background-color: #00f0ae;
-  color: #000;
-}
-
-.btn-primary:hover {
-  background-color: #00c89c;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: #00f0ae;
-  border: 2px solid #00f0ae;
-}
-
-.btn-secondary:hover {
-  background-color: #00f0ae;
-  color: #000;
-}
-
-section p {
-  text-indent: 2em;
-  color: #f5f5f5;
-}
-
-.no-indent p {
-  text-indent: 0;
+.rounded-circle {
+  object-fit: cover;
 }
