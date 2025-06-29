@@ -5,106 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arnett McMurray</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
   </head>
-  <body class="bg-dark text-white">
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Arnett McMurray</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-      <header class="text-center py-5">
-      <img
-        src="images/profile.jpg"
-        alt="Arnett McMurray"
-        class="rounded-circle mb-3"
-        width="150"
-      />
-      <h1 class="display-4">Arnett McMurray</h1>
-      <p class="lead">
-        Software Engineering Student | Problem Solver | Creator
-      </p>
-      <div class="cta-buttons mt-3">
-        <a href="projects.html" class="btn btn-primary me-2">View My Work</a>
-        <a href="contact.html" class="btn btn-outline-light">Get in Touch</a>
+  <body>
+    <header>
+      <div class="nav-bar">
+        <h1>Arnett McMurray</h1>
+        <nav>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
     </header>
 
-  <main class="container py-5">
-  <div class="row g-5 align-items-start">
-    <div class="col-md-6">
-      <h3>Who I Am</h3>
-      <p>
-        I'm a former chef turned software engineer, with roots in business and a passion for solving real-world problems through clean, thoughtful code.
-      </p>
-      <p>
-        Coding isn't just about logic—it's about creating systems that make life easier, smarter, and sometimes more beautiful.
-      </p>
-      <p>
-        My background in leadership, precision, and teamwork from years in the kitchen translates naturally into building web applications, solving data problems, and writing code that holds up under pressure.
-      </p>
-    </div>
-
-    <div class="col-md-6">
-      <h3 class="mb-3">My Crew</h3>
-      <div class="d-flex justify-content-center gap-5">
-        <div class="text-center">
-          <img src="images/bubba.jpg" alt="Bubba the cat" class="rounded-circle" width="140" height="140" />
-          <p class="mt-2">Bubba<br /><small>The Shadow</small></p>
+    <main class="main-grid">
+      <section class="intro-text">
+        <h2>Arnett McMurray</h2>
+        <p class="subtitle">
+          Software Engineering Student | Problem Solver | Creator
+        </p>
+        <div class="buttons">
+          <a href="projects.html" class="btn primary">View My Work</a>
+          <a href="contact.html" class="btn">Get in Touch</a>
         </div>
-        <div class="text-center">
-          <img src="images/obi.jpg" alt="Obi the dog" class="rounded-circle" width="140" height="140" />
-          <p class="mt-2">Obi<br /><small>The Guardian</small></p>
-        </div>
-      </div>
-    </div>
-  </div>
+      </section>
 
-  <div class="mt-5">
+      <section class="profile-image">
+        <img src="images/profile.jpg" alt="Arnett McMurray" />
+      </section>
+
+      <section class="who-i-am">
+        <h3>Who I Am</h3>
+        <p>
+          I'm a former chef turned software engineer, with roots in business and
+          a passion for solving real-world problems through clean, thoughtful
+          code.
+        </p>
+        <p>
+          Coding isn't just about logic—it's about creating systems that make
+          life easier, smarter, and sometimes more beautiful.
+        </p>
+        <p>
+          My background in leadership, precision, and teamwork from years in the
+          kitchen translates naturally into building web applications, solving
+          data problems, and writing code that holds up under pressure.
+        </p>
+      </section>
+
+      <section class="skills-tools">
         <h3>Skills & Tools</h3>
-        <ul class="list-inline">
-          <li class="list-inline-item badge bg-secondary m-1">HTML</li>
-          <li class="list-inline-item badge bg-secondary m-1">CSS</li>
-          <li class="list-inline-item badge bg-secondary m-1">JavaScript</li>
-          <li class="list-inline-item badge bg-secondary m-1">Python</li>
-          <li class="list-inline-item badge bg-secondary m-1">SQL</li>
-          <li class="list-inline-item badge bg-secondary m-1">Git & GitHub</li>
-          <li class="list-inline-item badge bg-secondary m-1">Bootstrap</li>
-          <li class="list-inline-item badge bg-secondary m-1">VS Code</li>
-        </ul>
-      </div>
+        <div class="badges">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span
+          ><span>Python</span> <span>SQL</span><span>Git & GitHub</span
+          ><span>Bootstrap</span><span>VS Code</span>
+        </div>
+      </section>
+
+      <section class="my-crew">
+        <h3>My Crew</h3>
+        <div class="crew-images">
+          <div>
+            <img
+              src="images/bubba.jpg"
+              alt="Bubba the cat"
+              class="circle-img"
+            />
+            <p><strong>Bubba</strong><br />The Shadow</p>
+          </div>
+          <div>
+            <img src="images/obi.jpg" alt="Obi the dog" class="circle-img" />
+            <p><strong>Obi</strong><br />The Guardian</p>
+          </div>
+        </div>
+        <p class="crew-joke">
+          Together, they sit on my keyboard and press the perfect bug-producing
+          combination of keys when I least expect it.
+        </p>
+      </section>
     </main>
-
-    <footer class="text-center py-4 mt-5 border-top">
-      <p>&copy; 2025 Arnett McMurray</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

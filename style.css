@@ -1,36 +1,131 @@
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #121212;
-  color: #ffffff;
-  line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
 }
 
-.navbar {
-  margin-bottom: 0;
+.nav-bar {
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
 }
 
-h2,
-h3 {
-  color: #f8f9fa;
+.nav-bar h1 {
+  margin: 0;
+  font-size: 1.2rem;
 }
 
-img {
-  max-width: 100%;
+.nav-bar nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-areas:
+    "intro profile"
+    "who skills"
+    "crew crew";
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  grid-area: intro;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.buttons {
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  margin-right: 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+.profile-image {
+  grid-area: profile;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image img {
+  width: 250px;
   height: auto;
-}
-
-footer {
-  border-color: #444;
-}
-
-.nav-link {
-  color: #ccc !important;
-}
-
-.nav-link:hover {
-  color: #fff !important;
-}
-
-.rounded-circle {
+  border-radius: 8px;
   object-fit: cover;
+}
+
+.who-i-am {
+  grid-area: who;
+}
+
+.skills-tools {
+  grid-area: skills;
+}
+
+.badges span {
+  display: inline-block;
+  margin: 0.3rem;
+  padding: 0.4rem 0.7rem;
+  background: #333;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.my-crew {
+  grid-area: crew;
+  text-align: center;
+}
+
+.crew-images {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+
+.circle-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #555;
+}
+
+.crew-joke {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #aaa;
 }
