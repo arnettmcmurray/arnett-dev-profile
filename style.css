@@ -16,6 +16,27 @@ li {
   color: #e0e0e0;
 }
 
+.profile-section h3 {
+  color: #ffdd57; /* Warm gold pop */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.profile-section ul li {
+  color: #e0e0e0; /* Soft white-gray for contrast */
+  padding-left: 1rem;
+  position: relative;
+}
+
+.profile-section ul li::before {
+  content: "•";
+  color: #ffdd57;
+  position: absolute;
+  left: 0;
+}
+
 section {
   background-color: #1e1e1e; /* lighter than body for separation */
   padding: 2rem;
