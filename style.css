@@ -64,7 +64,18 @@ body {
   align-items: center;
 }
 
-.raindrop {
+body.home .raindrop {
+  position: absolute;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: float 7s infinite ease-in-out;
+  opacity: 0.6;
+}
+
+body:not(.home) .raindrop {
   position: absolute;
   top: -10%;
   width: 2px;
@@ -75,7 +86,7 @@ body {
   background: currentColor;
   filter: drop-shadow(0 0 5px currentColor);
 }
-  
+
 @keyframes fall {
   0% {
     transform: translateY(0);
@@ -86,6 +97,18 @@ body {
     opacity: 0;
   }
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(-10vh);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
 
 .hero-content {
   position: relative;
@@ -328,12 +351,13 @@ body {
   position: relative;
   z-index: 1;
 }
+
 a {
-  color: #f9d342; 
+  color: #f9d342;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #ffffff; 
+  color: #ffffff;
 }
