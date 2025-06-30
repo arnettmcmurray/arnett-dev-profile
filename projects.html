@@ -5,32 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects - Arnett McMurray</title>
     <link rel="stylesheet" href="style.css" />
-    <head>
-      
-    </head>
-    <body>
-      <div class="raindrop-container"> 
-        <div class="raindrop"></div>
-        <div class="raindrop"></div>
-        <div class="raindrop"></div>
-        <div class="raindrop"></div>
-        <div class="raindrop"></div>
-        <div class="raindrop"></div>
-        <div class="raindrop"></div>
-        <div class="raindrop"></div>
-        <div class="raindrop"></div>
-        <div class="raindrop"></div>
-      </div>
-    
-      <header>
-        
-      </header>
-    
-  
+  </head>
+  <body>
     <header>
       <div class="nav-bar">
         <h1><a href="index.html" class="site-title">Arnett McMurray</a></h1>
-
         <nav>
           <a href="about.html">About</a>
           <a href="projects.html">Projects</a>
@@ -39,47 +18,85 @@
       </div>
     </header>
 
-    <main>
-      <div class="page-content">
-        <section>
-          <h2>Recent Work</h2>
-          <p>
-            Here's where the magic happens. Each repo a spell, every commit a
-            mark of progress.
-          </p>
-          <ul>
-            <li>🛠 Portfolio Site - HTML/CSS</li>
-            <li>📊 Data Dashboard - JavaScript/Chart.js</li>
-            <li>🐍 Python Script to Automate Boring Stuff</li>
-          </ul>
-          <ul>
-            <li>
-              🎥 <strong>Netflix Genre Ratings:</strong> Used Python and Pandas
-              to analyze average ratings by genre from a Netflix dataset.
-              Created visualizations using Matplotlib. GitHub link: [TBD]
-            </li>
-            <li>
-              🛍 <strong>Instacart Shopper Patterns:</strong> Wrote complex SQL
-              joins and aggregations to uncover user behavior insights across
-              thousands of shopping sessions.
-            </li>
-            <li>
-              🎶 <strong>Chinook Music Store:</strong> Wrote SQL queries to help
-              the imaginary music store understand customer purchases, top
-              artists, and most profitable genres.
-            </li>
-            <li>
-              🌱 <strong>CO₂ Uptake in Plants (R):</strong> Used R to compare
-              CO₂ uptake between chilled and non-chilled treatments in grass
-              plant groups using t-tests and visualizations.
-            </li>
-          </ul>
-        </section>
-      </div>
-    </main>
+    <div class="hero-banner">
+      <div class="raindrop-container"></div>
+
+      <main>
+        <div class="page-wrapper">
+          <div class="page-content">
+            <section>
+              <h2>Recent Work</h2>
+              <p>
+                Here's where the magic happens. Each repo a spell, every commit
+                a mark of progress.
+              </p>
+              <ul>
+                <li>
+                  🛠 <strong>Portfolio Site - HTML/CSS</strong><br />
+                  <a
+                    href="https://github.com/arnettmcmurray/html-profile"
+                    target="_blank"
+                    >GitHub Repo</a
+                  >
+                </li>
+                <li>
+                  📰 <strong>News Website Template:</strong> Responsive news
+                  layout using CSS Grid and Flexbox.<br />
+                  <a
+                    href="https://arnettmcmurray.github.io/news-website-template/"
+                    target="_blank"
+                    >Live Site</a
+                  >
+                </li>
+                <li>
+                  🎯 <strong>High Stakes Night:</strong> CSS event signup page
+                  for a fictional charity.<br />
+                  <a
+                    href="https://arnettmcmurray.github.io/high-stakes-night/"
+                    target="_blank"
+                    >Live Site</a
+                  >
+                </li>
+                <li>
+                  🧱 <strong>Module 2 HTML/CSS Assignments:</strong> Base work
+                  from early frontend lessons.<br />
+                  <a
+                    href="https://arnettmcmurray.github.io/module-2-html-css/"
+                    target="_blank"
+                    >Live Site</a
+                  >
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
 
     <footer>
       <p>&copy; 2025 Arnett McMurray</p>
     </footer>
+
+    <script>
+      const container = document.querySelector(".raindrop-container");
+
+      for (let i = 0; i < 144; i++) {
+        const drop = document.createElement("div");
+        drop.classList.add("raindrop");
+        drop.style.color = `hsl(${Math.random() * 360}, 100%, 60%)`;
+
+        const hue = (300 / 144) * i;
+        const left = (i / 144) * 100;
+        const delay = Math.random() * 4;
+        const scale = 0.5 + Math.random();
+
+        drop.style.left = `${left}%`;
+        drop.style.animationDelay = `-${delay}s`;
+        drop.style.background = `linear-gradient(to bottom, black, hsla(${hue}, 100%, 50%, 0.8))`;
+        drop.style.transform = `scaleY(${scale})`;
+
+        container.appendChild(drop);
+      }
+    </script>
   </body>
 </html>
