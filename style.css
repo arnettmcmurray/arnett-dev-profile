@@ -1,4 +1,9 @@
-body {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(225deg, #2a2f45, #1e1e1e, #111111);
@@ -37,15 +42,83 @@ body {
 }
 
 @keyframes gradientPulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.raindrop-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.raindrop {
+  position: absolute;
+  top: -10%;
+  width: 2px;
+  height: 15vh;
+  opacity: 0.7;
+  animation: fall 3s linear infinite;
+  background: linear-gradient(to bottom, red, orange, yellow, green, cyan, blue, indigo, violet);
+}
+
+@keyframes fall {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    transform: translateY(0);
+    opacity: 0.8;
   }
   100% {
-    background-position: 0% 50%;
+    transform: translateY(110vh);
+    opacity: 0;
   }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.intro-text {
+  flex: 1;
+  padding: 0;
+}
+
+.profile-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-image img {
+  width: 240px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 .main-grid {
@@ -55,17 +128,23 @@ body {
     "who skills"
     "crew crew";
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1.5rem;
+  padding: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.intro-text {
-  grid-area: intro;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.who-i-am {
+  grid-area: who;
+}
+
+.skills-tools {
+  grid-area: skills;
+}
+
+.my-crew {
+  grid-area: crew;
+  text-align: center;
 }
 
 .subtitle {
@@ -78,23 +157,28 @@ body {
 }
 
 .btn {
-  padding: 0.5rem 1rem;
-  border: 1px solid #fff;
+  padding: 0.6rem 1.4rem;
+  border: 2px solid #ffffff;
   background: transparent;
-  color: #fff;
-  margin-right: 1rem;
+  color: #ffffff;
+  border-radius: 30px;
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 4px;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .btn.primary {
-  background-color: #007bff;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
   border: none;
+  box-shadow: 0 4px 12px rgba(0, 114, 255, 0.4);
 }
 
 .btn:hover {
-  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 114, 255, 0.5);
+  cursor: pointer;
 }
 
 .profile-image {
@@ -113,26 +197,20 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.who-i-am {
-  grid-area: who;
-}
-
-.skills-tools {
-  grid-area: skills;
-}
-
 .badges span {
   display: inline-block;
   margin: 0.3rem;
-  padding: 0.4rem 0.7rem;
-  background: #333;
-  border-radius: 5px;
-  font-size: 0.9rem;
+  padding: 0.4rem 0.9rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f0f0f0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  transition: background 0.3s ease;
 }
 
-.my-crew {
-  grid-area: crew;
-  text-align: center;
+.badges span:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .crew-images {
@@ -143,11 +221,18 @@ body {
 }
 
 .circle-img {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #555;
+  border: 3px solid #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
 }
 
 .crew-joke {
@@ -155,15 +240,29 @@ body {
   font-style: italic;
   color: #aaa;
 }
-.who-i-am,
-.skills-tools,
-.my-crew,
-.intro-text {
-  background-color: #2a2a2a;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
+.crew-images p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #eee;
 }
+
+.crew-images p strong {
+  font-size: 1.1rem;
+  color: #ffeb3b;
+  letter-spacing: 0.5px;
+}
+
+.who-i-am,
+.intro-text,
+.skills-tools,
+.my-crew {
+  padding: 0.75rem;
+  background-color: transparent;
+  box-shadow: none;
+}
+
 .who-i-am:hover,
 .skills-tools:hover,
 .my-crew:hover,
@@ -172,6 +271,7 @@ body {
   transform: translateY(-4px);
   transition: all 0.3s ease;
 }
+
 .page-content {
   max-width: 900px;
   margin: 2rem auto;
@@ -180,7 +280,47 @@ body {
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
+
 .page-content p {
   text-indent: 2em;
   margin-bottom: 1.2em;
+}
+
+.site-title {
+  color: white;
+  text-decoration: none;
+}
+
+.site-title:hover {
+  text-decoration: underline;
+  color: #ffeb3b;
+}
+
+.pet-card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.pet-card:hover {
+  transform: scale(1.03);
+}
+
+.bubba-card:hover {
+  background: radial-gradient(circle at center, #1e2a4f, #0f172a);
+}
+
+.obi-card:hover {
+  background: radial-gradient(circle at center, #4f3b0a, #1e1400);
+}
+
+@keyframes heroGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.page-wrapper {
+  position: relative;
+  z-index: 1;
 }

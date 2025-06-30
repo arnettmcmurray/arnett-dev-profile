@@ -9,7 +9,7 @@
   <body>
     <header>
       <div class="nav-bar">
-        <h1>Arnett McMurray</h1>
+        <h1><a href="index.html" class="site-title">Arnett McMurray</a></h1>
         <nav>
           <a href="about.html">About</a>
           <a href="projects.html">Projects</a>
@@ -18,22 +18,26 @@
       </div>
     </header>
 
-    <main class="main-grid">
-      <section class="intro-text">
-        <h2>Arnett McMurray</h2>
-        <p class="subtitle">
-          Software Engineering Student | Problem Solver | Creator
-        </p>
-        <div class="buttons">
-          <a href="projects.html" class="btn primary">View My Work</a>
-          <a href="contact.html" class="btn">Get in Touch</a>
+    <section class="hero-banner">
+      <div class="raindrop-container"></div>
+      <div class="hero-content">
+        <div class="intro-text">
+          <h2>Arnett McMurray</h2>
+          <p class="subtitle">
+            Software Engineering Student | Problem Solver | Creator
+          </p>
+          <div class="buttons">
+            <a href="projects.html" class="btn primary">View My Work</a>
+            <a href="contact.html" class="btn">Get in Touch</a>
+          </div>
         </div>
-      </section>
+        <div class="profile-image">
+          <img src="images/profile.jpg" alt="Arnett McMurray" />
+        </div>
+      </div>
+    </section>
 
-      <section class="profile-image">
-        <img src="images/profile.jpg" alt="Arnett McMurray" />   
-      </section>
-
+    <main class="main-grid">
       <section class="who-i-am">
         <h3>Who I Am</h3>
         <p>
@@ -55,16 +59,16 @@
       <section class="skills-tools">
         <h3>Skills & Tools</h3>
         <div class="badges">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span
-          ><span>Python</span> <span>SQL</span><span>Git & GitHub</span
-          ><span>Bootstrap</span><span>VS Code</span>
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          <span>Python</span><span>SQL</span><span>Git & GitHub</span>
+          <span>Bootstrap</span><span>VS Code</span>
         </div>
       </section>
 
       <section class="my-crew">
         <h3>My Crew</h3>
         <div class="crew-images">
-          <div>
+          <div class="pet-card bubba-card">
             <img
               src="images/bubba.jpg"
               alt="Bubba the cat"
@@ -72,7 +76,7 @@
             />
             <p><strong>Bubba</strong><br />The Shadow</p>
           </div>
-          <div>
+          <div class="pet-card obi-card">
             <img src="images/obi.jpg" alt="Obi the dog" class="circle-img" />
             <p><strong>Obi</strong><br />The Guardian</p>
           </div>
@@ -83,5 +87,26 @@
         </p>
       </section>
     </main>
+
+    <script>
+      const container = document.querySelector(".raindrop-container");
+
+      for (let i = 0; i < 144; i++) {
+        const drop = document.createElement("div");
+        drop.classList.add("raindrop");
+
+        const hue = (300 / 144) * i;
+        const left = (i / 144) * 100;
+        const delay = Math.random() * 4;
+        const scale = 0.5 + Math.random();
+
+        drop.style.left = `${left}%`;
+        drop.style.animationDelay = `-${delay}s`;
+        drop.style.background = `linear-gradient(to bottom, black, hsla(${hue}, 100%, 50%, 0.8))`;
+        drop.style.transform = `scaleY(${scale})`;
+
+        container.appendChild(drop);
+      }
+    </script>
   </body>
 </html>
